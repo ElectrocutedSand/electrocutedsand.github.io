@@ -3,10 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0;url=https://www.electrocutedsand.com">
     <title>Redirecting...</title>
+    <style>
+        /* General page styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            color: #333;
+            overflow: hidden;
+        }
+
+        .loading-container {
+            text-align: center;
+        }
+
+        /* Loading text */
+        .loading-text {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Spinner animation */
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #ddd;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>If you are not redirected automatically, follow this <a href="https://www.electrocutedsand.com">link</a>.</p>
+    <div class="loading-container">
+        <div class="spinner"></div>
+        <p class="loading-text">Redirecting...</p>
+    </div>
+    <script>
+        // Redirect to www.electrocutedsand.com after 3 seconds
+        setTimeout(() => {
+            window.location.href = "https://www.electrocutedsand.com/";
+        }, 3000);
+    </script>
 </body>
 </html>
